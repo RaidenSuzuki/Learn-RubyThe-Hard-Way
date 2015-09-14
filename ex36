@@ -1,0 +1,100 @@
+def tunnel_end
+	puts "This room is full of quartz crystals, like the inside of a giant geode."
+	puts "The sound is extremely loud here. So loud you feel a bit dizzy."
+	puts "But the shiny crystals are calling to you."
+	puts "Do you touch the crystal?"
+	puts " touch or leave"
+
+	print ">"
+	choice = $stdin.gets.chomp
+
+	if choice == "touch"
+		puts "You pass out, and wake up outside."
+		puts "You dont know how you got there or why your head hurts so much."
+		exit(0)
+	else
+		tunnel_path
+	end
+
+end
+
+
+def tunnel_path
+	puts "The path is dark and narrow."
+	puts "As you follow the tunnel you begin hearing a weird sound."
+	puts "Do you proceed?"
+	puts "proceed, go back, or do nothing"
+	move = false
+
+	while true
+		print ">"
+		choice = $stdin.gets.chomp
+
+		if choice == "proceed"
+			tunnel_end
+		elsif choice == "go back"
+			puts "You exit the tunnel"
+			start
+		elsif choice == "do nothing"
+			
+			puts "you become intrigued by the sound and slowly proceed"
+		else
+			puts "I got no idea what that means."
+		end
+	end
+end
+
+
+def leave
+	puts "You leave the crater."
+	puts "As you slowly walk away you wonder what you missed and if you should turn back.."
+	puts "Do you turn back or leave forever?"
+
+	print "> "
+	choice = $stdin.gets.chomp
+
+	if choice.include? "turn back"
+		start
+	elsif choice.include? "leave forever"
+		puts "Fear has won today, dont let it continue to win or you will always regret it"
+		exit(0)
+	else 
+		puts "I dont know what that means"
+	end
+end
+
+
+def fall_in
+	puts "You fall into the crater."
+	puts "Do you enter the tunnel?"
+	puts "yes or no"
+	print "> "
+	choice = $stdin.gets.chomp
+
+	if choice == "yes"
+		tunnel_path
+	else choice == "no"
+		leave
+	end
+end
+
+
+
+def start
+	puts "You are walking in the woods and stumble accross a large crater."
+	puts "You can see a tunnel at the bottom of the crater."
+	puts "Do you enter the tunnel, yes or no?" 
+
+	print "> "
+	choice = $stdin.gets.chomp
+
+	if choice == "yes"
+		tunnel_path
+	elsif choice == "no"
+		leave
+	else
+		fall_in
+	end
+end
+
+start
