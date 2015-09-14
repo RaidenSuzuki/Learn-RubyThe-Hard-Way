@@ -1,0 +1,24 @@
+puts "I will now count my chickens:"
+	#Prints out a string plus solution of a math problem
+puts "Hens #{25.0 + 30 / 6}"
+puts "Roosters #{100 - 25.0 * 3 % 4}"
+	#Prints out a string
+puts "Now I will count the eggs:"
+	#Prints out the solution to a math problem.
+puts 3 + 2 + 1 - 5 + 4.0 % 2 - 1 / 4 + 6
+	#Prints out a string.
+puts "is it true that 3 + 2 < 5 - 7?"
+	#Prints out the solution to a math problem
+puts 3 + 2 < 5 - 7.0
+	#Prints out two strins and the solution to a math problem.
+puts "What is 3 + 2? #{3.0 + 2}"
+puts "What is 5 - 7 #{5.0 - 7}"
+	#Prints out a string
+puts "Oh, that's why it is false."
+	#Pirints out a string.
+puts "How about some more."
+	#Prints out 3 strings and solutions
+puts "Is it greater? #{5.0 > -2}"
+puts "Is it greater or equal? #{5.0 >= -2}"
+puts "Is it less or equal #{5.0 <= -2}"
+
